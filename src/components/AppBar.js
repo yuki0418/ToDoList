@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
-import './AppBar.scss';
 
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -11,19 +8,33 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+};
+
 class Appbar extends Component {
+  
   render() {
     return (
-      <div className="Appbar felxgrow1">
-        <AppBar position="static">
+      <div className={this.props.classes.root}>
+        <AppBar position="fixed">
             <Toolbar>
-                <IconButton color="inherit">
+                <IconButton color="inherit" className={this.props.classes.menuButton}>
                     <MenuIcon />
                 </IconButton>
-                <Typography color="inherit" variant="h6" className="felxgrow1">
+                <Typography color="inherit" variant="h6" className={this.props.classes.grow}>
                     To DO List
                 </Typography>
-                <Button color="inherit" className="btnLogin">Login</Button>
+                <Button color="inherit">Login</Button>
             </Toolbar>
         </AppBar>
       </div>
@@ -31,4 +42,4 @@ class Appbar extends Component {
   }
 }
 
-export default Appbar;
+export default withStyles(styles)(Appbar);
