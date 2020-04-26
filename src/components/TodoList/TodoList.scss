@@ -1,6 +1,8 @@
 @import "../../sass/main";
 
 .TodoList {
+  z-index: 100;
+  background-color: white;
   width: $sidebar-width;
   height: calc(100vh - 5rem);
   // min-height: calc(100vh - 5rem);
