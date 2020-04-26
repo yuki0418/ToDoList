@@ -40,7 +40,7 @@ class Login extends Component {
               type="email"
               name="E-mail"
               id='email'
-              placeholder="simpleTodoApp@email.com"
+              placeholder="Email"
               label="E-mail"
               onChange={this.onChange}
               className="email"

@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem;
 
   .container {
     // width: 30rem;
@@ -21,7 +22,7 @@
     }
 
     form {
-      width: 30rem;
+      max-width: 30rem;
       margin-left: auto;
       margin-right: auto;
       .email {}
@@ -84,4 +85,10 @@
       transform: rotate(360deg);
     }
   }
+}
+
+.coution{
+  color: red;
+  padding-top: 1rem;
+  font-size: 1.2rem;
 }

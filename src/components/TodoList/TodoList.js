@@ -9,18 +9,19 @@ import {
 } from '../../redux/actions';
 import { VisibilityFilters } from '../../redux/actions/actionTypes';
 
-import Aux from '../../hoc/Aux';
 import TodoToggleButton from '../TodoToggleButton/TodoToggleButton';
 import TodoItem from '../TodoItem/TodoItem';
 import AddButton from '../AddButton/AddButton';
 import Modal from '../../container/Modal/Modal';
 import AddTodo from '../AddTodo/AddTodoForm';
+import { FaAngleRight } from 'react-icons/fa';
 
 
 
 class TodoList extends Component {
   state = {
     showModal: false,
+    showList: false
   }
 
   clickFilterHandler = (filter) => {
@@ -44,6 +45,12 @@ class TodoList extends Component {
     }))
   }
 
+  handleToggleList = () => {
+    this.setState({
+      showList: !this.state.showList
+    })
+  }
+
   componentDidMount = () => {
     this.props.onInit();
     this.props.getTodos(this.props.auth.token);
@@ -51,8 +58,12 @@ class TodoList extends Component {
 
   render() {
     return(
-      <Aux>
-        <div className="TodoList">
+      <div style={{position: 'relative'}}>
+        {/* <div className="toggleListBtn"><FaAngleRight className="toggleListBtn"/></div> */}
+        <FaAngleRight 
+          className={ this.state.showList ? "toggleListBtn show" : "toggleListBtn" }
+          onClick={this.handleToggleList}/>
+        <div className={this.state.showList ? "TodoList show" : "TodoList"}>
           <TodoToggleButton toggled={this.clickFilterHandler}/>
           {
             this.props.todoList ?
@@ -63,8 +74,8 @@ class TodoList extends Component {
             })
             : null
           }
+          <AddButton clicked={this.addBtnClicked}/>
         </div>
-        <AddButton clicked={this.addBtnClicked}/>
         <Modal 
           title="Add Todo"
           show={this.state.showModal}
@@ -72,7 +83,7 @@ class TodoList extends Component {
           closeBtnClicked={this.modalToggle}>
           <AddTodo completedAdding={this.closeModal}/>
         </Modal>
-      </Aux>
+      </div>
     )
   }
 }

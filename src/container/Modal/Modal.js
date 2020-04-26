@@ -1,12 +1,12 @@
 import React from 'react';
-import Aux from '../../hoc/Aux';
+import Auxs from '../../hoc/Auxs';
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
 import "./Modal.scss";
 
 const Modal = (props) => {
   return (
-    <Aux>
+    <Auxs>
       {props.show ? 
         <div className="Backdrop" onClick={props.backdropClicked}></div>
         : null}
@@ -32,7 +32,7 @@ const Modal = (props) => {
           {props.children}
         </div>  
       </div>
-    </Aux>
+    </Auxs>
   )
 }
 

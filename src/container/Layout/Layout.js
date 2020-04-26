@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from '../../hoc/Aux';
+import Auxs from '../../hoc/Auxs';
 import {
   BrowserRouter as Router,
   Switch,
@@ -41,7 +41,7 @@ class Layout extends Component {
       routes = (
         <Switch>
           <Route exact path="/">
-            <Aux>
+            <div style={{position: 'relative'}}>
               { this.props.isRequest ?
                 <Loader /> : null
               }
@@ -53,7 +53,7 @@ class Layout extends Component {
                   : null
                 }
               </main>
-            </Aux>
+            </div>
           </Route>
           <Redirect to="/" />
         </Switch>

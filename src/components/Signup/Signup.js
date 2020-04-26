@@ -61,7 +61,7 @@ class Signup extends Component {
               type="email"
               name="E-mail"
               id='email'
-              placeholder="simpleTodoApp@email.com"
+              placeholder="Email"
               label="E-mail"
               onChange={this.onChange}
               className="email"
@@ -126,6 +126,7 @@ class Signup extends Component {
                 <div className="spinnerCircle"></div> : 'Create'}
             </button>
             <Link to="/" className="btn-backToLogin">Back to login</Link>
+            <p className="coution">This app is for portfolio<br/>Don't your important email and password</p>
           </form>
         </div>
       </div>

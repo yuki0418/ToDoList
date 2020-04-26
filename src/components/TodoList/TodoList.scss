@@ -2,12 +2,68 @@
 
 .TodoList {
   width: $sidebar-width;
-  min-height: calc(100vh - 5rem);
+  height: calc(100vh - 5rem);
+  // min-height: calc(100vh - 5rem);
   border-right: .1rem solid rgba(0,0,0, .2);
   box-shadow:  1px 0 5px 0 rgba(0,0,0, .3);
+  overflow-y: scroll;
+  position: relative;
+  transition: all .5s ease-in;
+  transform: translateX(0);
 
-  // position: relative;
-  position: static;
-  top:0;
-  left: 0;
+  &::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    // border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: 5px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    background-image: -webkit-gradient(linear,
+                      left bottom,
+                      left top,
+                      color-stop(0.44, rgb(0, 40, 120)),
+                      color-stop(0.72, rgb(18, 41, 69)),
+                      color-stop(0.86, rgb(5, 10, 25)));
+  }
+
+  &.show {
+    transform: translateX(0);
+  }
+}
+
+.toggleListBtn {
+  position: absolute;
+  width: 4rem;
+  height: 5rem;
+  z-index: 100;
+  color: $color-primary;
+  top: 0rem;
+  left: 29.9rem;
+  right: $sidebar-width;
+  transition: all .5s ease-in;
+  cursor: pointer;
+  visibility: hidden;
+
+  &.show {
+    transform: translateX(0) rotate(180deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .TodoList {
+    position: relative;
+    transform: translateX(-$sidebar-width);
+  }
+  .toggleListBtn {
+    visibility: visible;
+    transform: translateX(-$sidebar-width);
+  }
 }
