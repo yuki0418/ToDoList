@@ -1,0 +1,31 @@
+.CircleColorPicker {
+  position: relative;
+  z-index: 20;
+}
+
+.selectedColor {
+  border-radius: 50%;
+  height: 2.8rem;
+  width: 2.8rem;
+  cursor: pointer;
+  transition: all .05s ease-in;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: -22rem;
+  background-color: white;
+  padding: .6rem;
+  border-radius: 8px;
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, .5);
+}
+
+.popover {
+  position: absolute;
+  z-index: 2;
+}

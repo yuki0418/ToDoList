@@ -1,0 +1,44 @@
+.TodoItem {
+  height: 8rem;
+  display: flex;
+  margin-bottom: 2px;
+  transition: all .1s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(lightskyblue, .3);
+  }
+
+  .color {
+    min-width: .8rem;
+    height: 100%;
+    float: left;
+  }
+
+  .detail {
+    padding: .5rem;
+    max-width: 26rem;
+
+    .title {
+      max-width: 100%;
+    }
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    padding-right: 8px;
+
+    .icon {
+      transition: all .1s ease-in;
+
+      &:hover{
+        transform: scale(1.2);
+        transform-origin: center;
+      }
+    }
+  }
+}

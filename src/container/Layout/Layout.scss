@@ -1,0 +1,9 @@
+@import "../../sass/main";
+
+main {
+  position: absolute;
+  top: $header-height;
+  left: $sidebar-width;
+  width: calc(100% - #{$sidebar-width});
+  height: calc(100% - #{$header-height});
+}

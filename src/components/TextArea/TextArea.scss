@@ -1,0 +1,26 @@
+@import '../../sass/main';
+
+.TextArea {
+  display: flex;
+  flex-direction: column;
+
+  .label {
+    font-size: 1.3rem;
+    margin-bottom: .2rem;
+  }
+
+  .text-area {
+    resize: unset;
+    padding: .4rem .6rem;
+    max-height: 100%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    outline-color: rgba(0,0,0,0);
+    transition: all .2s ease-in;
+
+    &:focus,
+    &:active {
+      outline-color: $color-primary;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../sass/main";
+
+.TodoToggleButtn {
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .radioItem {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: all .2s;
+  }
+
+  .radioItem:hover {
+    cursor: pointer;
+    background-color: lighten($color-primary, 15%);
+  }
+
+  input[type=radio]:checked + .radioItem{
+    background-color: $color-white;
+    color: $color-primary-dark;
+  }
+}

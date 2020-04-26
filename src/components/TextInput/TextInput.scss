@@ -1,0 +1,69 @@
+@import '../../sass/main';
+
+.TextInput {
+  position: relative;
+  height: 3rem;
+  margin-top: .6rem;
+
+  label {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    padding-left: .6rem;
+    transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+  }
+
+  input {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    padding-left: .6rem;
+    border: none;
+    border-bottom: solid #9b9b9b 1.4px;
+    outline: none;
+    font-weight: 400;
+    z-index: 1;
+    background-color: unset;
+
+    &:focus,
+    &:active {
+      outline: none;
+
+      & ~ .animation-border-bottom {
+        width: 100%;
+      }
+    }
+
+    &:not(:placeholder-shown) ~ .label {
+      transform: translateY(-2rem);
+      font-size: 1.3rem;
+      opacity: 1;
+      font-weight:400;
+    }
+    
+    /* Change the white to any color ;) */
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active  {
+      -webkit-box-shadow: 0 0 0 30px white inset !important;
+    }
+  }
+
+  .animation-border-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    z-index: 100;
+    border-bottom: 1.4px solid $color-primary;
+    transition: all .3s ease-in;
+  }
+}

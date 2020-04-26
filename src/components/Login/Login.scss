@@ -1,0 +1,87 @@
+@import '../../sass/main';
+
+.Login {
+  // width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    // width: 30rem;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateY(-5rem);
+
+    h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 4rem;
+      color: $color-primary;
+    }
+
+    form {
+      width: 30rem;
+      margin-left: auto;
+      margin-right: auto;
+      .email {}
+
+      .password {
+        margin-top: 2rem;
+      }
+
+      .error {
+        color: red;
+        margin-top: .6rem;
+        font-size: 1.4rem;
+      }
+      
+      .btn-login {
+        width: 100%;
+        height: 4rem;
+        margin-top: 1.4rem;
+        border-radius: .5rem;
+        border: unset;
+        outline: unset;
+        color: white;
+        font-weight: bold;
+        font-size: 1.6rem;
+        background: linear-gradient( to left, $color-primary-dark, $color-primary);
+        cursor: pointer;
+        transition: all .2s ease-in;
+        box-shadow: 0 .3rem 3px 0 rgba(0,0,0, .5);
+      
+        &:hover {
+          transform: translateY(-.3rem);
+          box-shadow: 0 .6rem 6px 0 rgba(0,0,0, .5);
+        }
+      }
+
+      .btn-regi {
+        display: block;
+        margin-top: .6rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .spinnerCircle {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 3px white solid;
+    border-top-color: rgba(255,255,255, .3);
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

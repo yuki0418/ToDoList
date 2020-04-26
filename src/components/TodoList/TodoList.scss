@@ -1,0 +1,13 @@
+@import "../../sass/main";
+
+.TodoList {
+  width: $sidebar-width;
+  min-height: calc(100vh - 5rem);
+  border-right: .1rem solid rgba(0,0,0, .2);
+  box-shadow:  1px 0 5px 0 rgba(0,0,0, .3);
+
+  // position: relative;
+  position: static;
+  top:0;
+  left: 0;
+}

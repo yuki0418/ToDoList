@@ -1,0 +1,44 @@
+@import "../../sass/main";
+
+.Header {
+  height: $header-height;
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: 2rem;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > div {
+    width: 33%;
+    text-align: center;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 2rem;
+
+    .btnLogout {
+      background-color: unset;
+      color: white;
+      font-size: 1.6rem;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    :last-child {
+      margin-left: 2rem;
+    }
+  }
+}
