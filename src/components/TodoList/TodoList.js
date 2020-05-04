@@ -58,7 +58,7 @@ class TodoList extends Component {
 
   render() {
     return(
-      <div style={{position: 'relative'}}>
+      <div style={{position: 'fixed'}}>
         {/* <div className="toggleListBtn"><FaAngleRight className="toggleListBtn"/></div> */}
         <FaAngleRight 
           className={ this.state.showList ? "toggleListBtn show" : "toggleListBtn" }
@@ -74,8 +74,8 @@ class TodoList extends Component {
             })
             : null
           }
-          <AddButton clicked={this.addBtnClicked}/>
         </div>
+        <AddButton clicked={this.addBtnClicked}/>
         <Modal 
           title="Add Todo"
           show={this.state.showModal}

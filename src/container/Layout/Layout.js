@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Auxs from '../../hoc/Auxs';
 import {
   BrowserRouter as Router,
   Switch,

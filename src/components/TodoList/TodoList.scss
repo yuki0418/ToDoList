@@ -5,9 +5,8 @@
   background-color: white;
   width: $sidebar-width;
   height: calc(100vh - 5rem);
-  // min-height: calc(100vh - 5rem);
   border-right: .1rem solid rgba(0,0,0, .2);
-  box-shadow:  1px 0 5px 0 rgba(0,0,0, .3);
+  // box-shadow:  1px 0 5px 0 rgba(0,0,0, .3);
   overflow-y: scroll;
   position: relative;
   transition: all .5s ease-in;
@@ -39,6 +38,10 @@
   &.show {
     transform: translateX(0);
   }
+}
+
+.btnContainer {
+  width: 100%;
 }
 
 .toggleListBtn {
