@@ -58,24 +58,26 @@ class TodoList extends Component {
 
   render() {
     return(
-      <div style={{position: 'fixed'}}>
+      <div style={{position: 'relative'}}>
         {/* <div className="toggleListBtn"><FaAngleRight className="toggleListBtn"/></div> */}
         <FaAngleRight 
           className={ this.state.showList ? "toggleListBtn show" : "toggleListBtn" }
           onClick={this.handleToggleList}/>
         <div className={this.state.showList ? "TodoList show" : "TodoList"}>
           <TodoToggleButton toggled={this.clickFilterHandler}/>
-          {
-            this.props.todoList ?
+          <div>
+            {
+              this.props.todoList ?
               this.props.todoList.map((item, key) => {
-              return <TodoItem 
-                        key={key} 
-                        item={item} />
-            })
-            : null
-          }
+                return <TodoItem 
+                key={key} 
+                item={item} />
+              })
+              : null
+            }
+          </div>
+          <AddButton clicked={this.addBtnClicked}/>
         </div>
-        <AddButton clicked={this.addBtnClicked}/>
         <Modal 
           title="Add Todo"
           show={this.state.showModal}
