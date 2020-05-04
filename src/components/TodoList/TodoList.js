@@ -58,7 +58,7 @@ class TodoList extends Component {
 
   render() {
     return(
-      <div style={{position: 'relative'}}>
+      <div style={{position: 'relative', top:'5rem'}}>
         {/* <div className="toggleListBtn"><FaAngleRight className="toggleListBtn"/></div> */}
         <FaAngleRight 
           className={ this.state.showList ? "toggleListBtn show" : "toggleListBtn" }
