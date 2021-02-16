@@ -6,10 +6,7 @@ React + nodejs with MongoDBを使用した簡単なToDo List Applicationです�
 npmを含んだLatest LTS Versionをインストールしてください。
 
 ### Backend Server
-2. ターミナルを開いて```cd server```を実行して/serverに移動してください。
-3. Root Directory上で```npm install```を実行してください。
-4. ```npm start```を実行してください。
-5. ServerがPORT=8080で稼働します。
+バックエンドサーバーはプライベートにしてあります。興味がある方はご連絡ください。
 
 ### Frontend Server
 2. ターミナルを開いて```cd app```を実行して/appに移動してください。
