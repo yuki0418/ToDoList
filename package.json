@@ -8,7 +8,7 @@
     "@material-ui/styles": "^3.0.0-alpha.10",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "react": "^16.8.1",
     "react-color": "^2.18.0",
     "react-datepicker": "^2.12.1",
